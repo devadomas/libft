@@ -6,7 +6,7 @@
 #    By: azaliaus <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/03 15:12:15 by azaliaus          #+#    #+#              #
-#    Updated: 2018/04/05 14:20:14 by azaliaus         ###   ########.fr        #
+#    Updated: 2018/04/05 18:36:26 by azaliaus         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,17 +30,20 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	@ar rc $(NAME) $(OBJS)
+	@ranlib $(NAME)
+	@echo "Compilation complete!"
 
 %.o: %.c
-	gcc $(FLAGS) -c -o $@ $<
+	@gcc $(FLAGS) -c -o $@ $<
 
 clean:
-	rm -rf $(OBJS)
+	@rm -rf $(OBJS)
+	@echo "Cleaning object files!"
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
+	@echo "Everything is cleaned!"
 
 re: fclean all
 
