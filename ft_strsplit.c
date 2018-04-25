@@ -6,11 +6,12 @@
 /*   By: azaliaus <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/04 20:36:41 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/04/05 10:26:28 by azaliaus         ###   ########.fr       */
+/*   Updated: 2018/04/11 14:49:00 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static size_t		ft_get_wrd_count(char const *s, char c)
 {

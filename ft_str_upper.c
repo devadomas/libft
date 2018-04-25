@@ -6,13 +6,13 @@
 /*   By: azaliaus <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/05 13:26:00 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/04/05 13:27:30 by azaliaus         ###   ########.fr       */
+/*   Updated: 2018/04/18 11:24:46 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_str_upper(char *s)
+void		ft_str_to_upper(char *s)
 {
 	if (!s)
 		return ;

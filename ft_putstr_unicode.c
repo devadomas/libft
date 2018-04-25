@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azaliaus <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/03 18:42:43 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/04/11 14:46:17 by azaliaus         ###   ########.fr       */
+/*   Created: 2018/04/04 17:51:28 by azaliaus          #+#    #+#             */
+/*   Updated: 2018/04/21 20:13:01 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
+#include <unistd.h>
+#include <wchar.h>
 
-char		*ft_strdup(const char *s1)
+void		ft_putstr_unicode(wchar_t const *s)
 {
-	size_t		i;
-	char		*str;
-
-	i = 0;
-	if (!(str = (char *)malloc(1 + ft_strlen(s1) * sizeof(char))))
-		return (0);
-	while (s1[i])
-	{
-		str[i] = s1[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+	if (!s)
+		return ;
+	while (*s)
+		ft_putchar_unicode(*(s++));
 }

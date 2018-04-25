@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_longlong.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azaliaus <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/03 18:42:43 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/04/11 14:46:17 by azaliaus         ###   ########.fr       */
+/*   Created: 2018/04/22 15:56:52 by azaliaus          #+#    #+#             */
+/*   Updated: 2018/04/22 16:01:57 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char		*ft_strdup(const char *s1)
+void		ft_putnbr_longlong(long long n)
 {
-	size_t		i;
-	char		*str;
-
-	i = 0;
-	if (!(str = (char *)malloc(1 + ft_strlen(s1) * sizeof(char))))
-		return (0);
-	while (s1[i])
+	if (n == -9223372036854775807)
 	{
-		str[i] = s1[i];
-		i++;
+		ft_putchar('-');
+		ft_putnbr_longlong(9223372036854775807 / 10);
+		ft_putnbr_longlong(9223372036854775807 % 10);
 	}
-	str[i] = '\0';
-	return (str);
+	else if (n < 0)
+	{
+		ft_putchar('-');
+		ft_putnbr_longlong(-n);
+	}
+	else if (n >= 0 && n < 10)
+		ft_putchar(n + '0');
+	else
+	{
+		ft_putnbr_longlong(n / 10);
+		ft_putnbr_longlong(n % 10);
+	}
 }

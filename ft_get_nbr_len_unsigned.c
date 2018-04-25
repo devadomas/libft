@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_get_nbr_len_unsigned.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azaliaus <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/03 18:42:43 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/04/11 14:46:17 by azaliaus         ###   ########.fr       */
+/*   Created: 2018/04/23 11:17:56 by azaliaus          #+#    #+#             */
+/*   Updated: 2018/04/23 11:18:48 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char		*ft_strdup(const char *s1)
+int		ft_get_nbr_len_unsigned(unsigned long long n)
 {
-	size_t		i;
-	char		*str;
+	int				ret;
 
-	i = 0;
-	if (!(str = (char *)malloc(1 + ft_strlen(s1) * sizeof(char))))
-		return (0);
-	while (s1[i])
-	{
-		str[i] = s1[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+	ret = 1;
+	while (n /= 10)
+		ret++;
+	return (ret);
 }
