@@ -1,25 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_str2dup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/04 13:42:35 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/05/13 14:49:30 by azaliaus         ###   ########.fr       */
+/*   Created: 2018/05/07 13:19:40 by azaliaus          #+#    #+#             */
+/*   Updated: 2018/05/07 13:31:06 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void		*ft_memalloc(size_t size)
+static size_t	multidim_len(char **arr)
 {
-	void	*ret;
+	size_t		len;
 
-	ret = malloc(size);
-	if (!ret)
+	len = 0;
+	while (*(arr++))
+		len++;
+	return (len);
+}
+
+char			**ft_str2dup(char **arr)
+{
+	char	**ret;
+	size_t	len;
+
+	if (!arr)
 		return (NULL);
-	ft_bzero(ret, size);
+	len = multidim_len(arr);
+	if (!(ret = (char **)malloc(sizeof(char *) * (len + 1))))
+		return (NULL);
+	len = 0;
+	while (*arr)
+	{
+		ret[len] = ft_strdup(*arr);
+		if (ret[len])
+			len++;
+		arr++;
+	}
+	ret[len] = NULL;
 	return (ret);
 }

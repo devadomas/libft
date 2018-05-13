@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: azaliaus <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/03 14:12:49 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/04/23 14:10:59 by azaliaus         ###   ########.fr       */
+/*   Updated: 2018/05/12 15:03:46 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,12 @@ int					ft_putchar_ret(char c);
 int					ft_get_nbr_len_unsigned(unsigned long long n);
 char				*ft_strjoin_conn(const char *s1, const char *s2,
 		const char c);
+int					ft_floor(float nbr);
+int					ft_floor_up(float nbr);
+char				**ft_str2dup(char **arr);
+void				ft_unset2str(char ***str);
+int					get_next_line(const int fd, char **line);
+char				*ft_strinsert(const char *str, const char *c, size_t n);
+void				ft_putstr_from(const char *str, size_t n);
 
 #endif

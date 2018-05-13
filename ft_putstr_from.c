@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_putstr_from.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/04 13:42:35 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/05/13 14:49:30 by azaliaus         ###   ########.fr       */
+/*   Created: 2018/05/09 18:16:05 by azaliaus          #+#    #+#             */
+/*   Updated: 2018/05/09 18:17:43 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void		*ft_memalloc(size_t size)
+void		ft_putstr_from(const char *str, size_t n)
 {
-	void	*ret;
-
-	ret = malloc(size);
-	if (!ret)
-		return (NULL);
-	ft_bzero(ret, size);
-	return (ret);
+	if (!str)
+		return ;
+	while (*str && n)
+	{
+		str++;
+		n--;
+	}
+	ft_putstr(str);
 }

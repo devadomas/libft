@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: azaliaus <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/03 15:55:28 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/04/03 16:00:19 by azaliaus         ###   ########.fr       */
+/*   Updated: 2018/05/13 14:53:25 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-	char	*str;
-
-	i = 0;
-	str = s;
-	if (n == 0)
-		return ;
-	while (i < n)
-	{
-		*str = 0;
-		str++;
-		i++;
-	}
+	ft_memset(s, '\0', n);
 }
