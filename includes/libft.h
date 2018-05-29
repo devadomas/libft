@@ -6,7 +6,7 @@
 /*   By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/03 14:12:49 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/05/28 22:39:17 by azaliaus         ###   ########.fr       */
+/*   Updated: 2018/05/29 22:26:59 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,5 +110,8 @@ char				*ft_strnremove(const char *str, size_t n);
 int					ft_isspace(int c);
 char				*ft_str3join(char const *s1, char const *s2,
 									char const *s3);
+void				ft_swap(int *a, int *b);
+char				*ft_strcutout(char const *s, unsigned int start,
+									size_t len);
 
 #endif
