@@ -6,7 +6,7 @@
 /*   By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/03 14:12:49 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/05/17 18:54:10 by azaliaus         ###   ########.fr       */
+/*   Updated: 2018/05/28 22:39:17 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ char				*ft_strjoin_conn(const char *s1, const char *s2,
 		const char c);
 int					ft_floor(float nbr);
 int					ft_floor_up(float nbr);
+int					ft_floor_upp(float nbr);
 char				**ft_str2dup(char **arr);
 void				ft_unset2str(char ***str);
 int					get_next_line(const int fd, char **line);
@@ -107,6 +108,7 @@ char				*ft_strinsert(const char *str, const char *c, size_t n);
 void				ft_putstr_from(const char *str, size_t n);
 char				*ft_strnremove(const char *str, size_t n);
 int					ft_isspace(int c);
-char				*ft_str3join(char const *s1, char const *s2, char const *s3);
+char				*ft_str3join(char const *s1, char const *s2,
+									char const *s3);
 
 #endif
