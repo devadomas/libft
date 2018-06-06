@@ -6,7 +6,7 @@
 /*   By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/03 14:12:49 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/06/02 14:09:35 by azaliaus         ###   ########.fr       */
+/*   Updated: 2018/06/05 14:52:15 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,5 +114,7 @@ void				ft_swap(int *a, int *b);
 char				*ft_strcutout(char const *s, unsigned int start,
 									size_t len);
 char				**ft_split_args(const char *cmd);
+void				ft_str2del(char ***arr);
+size_t				ft_str2len(char **arr);
 
 #endif

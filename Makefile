@@ -6,7 +6,7 @@
 #    By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/03 15:12:15 by azaliaus          #+#    #+#              #
-#    Updated: 2018/06/02 14:09:54 by azaliaus         ###   ########.fr        #
+#    Updated: 2018/06/05 14:52:25 by azaliaus         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 	   ft_get_nbr_len_unsigned.c ft_strjoin_conn.c ft_floor.c ft_str2dup.c \
 	   ft_unset2str.c get_next_line.c ft_strinsert.c ft_putstr_from.c \
 	   ft_strnremove.c ft_isspace.c ft_str3join.c ft_swap.c ft_strcutout.c \
-	   ft_split_args.c
+	   ft_split_args.c ft_str2del.c ft_str2len.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)

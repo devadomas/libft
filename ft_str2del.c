@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_str2del.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/03 18:42:43 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/06/05 14:13:41 by azaliaus         ###   ########.fr       */
+/*   Created: 2018/06/04 17:39:33 by azaliaus          #+#    #+#             */
+/*   Updated: 2018/06/04 17:41:59 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char		*ft_strdup(const char *s1)
+void		ft_str2del(char ***arr)
 {
-	size_t		i;
-	char		*str;
+	char	**cpy;
 
-	if (!s1)
-		return (NULL);
-	i = 0;
-	if (!(str = (char *)malloc(1 + ft_strlen(s1) * sizeof(char))))
-		return (0);
-	while (s1[i])
+	if (!arr)
+		return ;
+	cpy = *arr;
+	while (*cpy)
 	{
-		str[i] = s1[i];
-		i++;
+		ft_strdel(&(*cpy));
+		cpy++;
 	}
-	str[i] = '\0';
-	return (str);
+	ft_memdel((void **)&(*arr));
+	*arr = NULL;
 }
