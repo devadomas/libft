@@ -6,7 +6,7 @@
 /*   By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/09 14:36:34 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/06/09 14:37:28 by azaliaus         ###   ########.fr       */
+/*   Updated: 2018/06/09 14:42:51 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int			ft_isnumeric(const char *str)
 {
 	if (!str)
 		return (0);
+	if (*str == '+' || *str == '-')
+		str++;
 	while (*str)
 	{
 		if (!ft_isdigit(*str))
