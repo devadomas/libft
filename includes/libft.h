@@ -6,7 +6,7 @@
 /*   By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/03 14:12:49 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/06/09 14:37:38 by azaliaus         ###   ########.fr       */
+/*   Updated: 2018/06/18 11:17:57 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,5 +118,6 @@ void				ft_str2del(char ***arr);
 size_t				ft_str2len(char **arr);
 void				ft_putnbr_offset(int n, int offset);
 int					ft_isnumeric(const char *str);
+char				*ft_strndup(const char *str, size_t n);
 
 #endif
