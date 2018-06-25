@@ -6,7 +6,7 @@
 /*   By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/03 14:12:49 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/06/21 15:28:14 by azaliaus         ###   ########.fr       */
+/*   Updated: 2018/06/25 16:38:58 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,5 +121,9 @@ int					ft_isnumeric(const char *str);
 char				*ft_strndup(const char *str, size_t n);
 int					ft_hasquote(const char *str);
 char				**ft_str2join(char **arr1, char **arr2);
+size_t				ft_strlenchar(const char *str, char c);
+char				**ft_strarr_del(char **arr, int index);
+void				ft_put2str(char **arr);
+char				*ft_strjoin_by(char **arr, char c);
 
 #endif

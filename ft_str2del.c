@@ -6,17 +6,18 @@
 /*   By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/04 17:39:33 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/06/04 17:41:59 by azaliaus         ###   ########.fr       */
+/*   Updated: 2018/06/22 15:23:11 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void		ft_str2del(char ***arr)
 {
 	char	**cpy;
 
-	if (!arr)
+	if (!arr || !(*arr))
 		return ;
 	cpy = *arr;
 	while (*cpy)
@@ -24,6 +25,6 @@ void		ft_str2del(char ***arr)
 		ft_strdel(&(*cpy));
 		cpy++;
 	}
-	ft_memdel((void **)&(*arr));
+	free(*arr);
 	*arr = NULL;
 }

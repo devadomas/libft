@@ -6,7 +6,7 @@
 /*   By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/21 15:27:43 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/06/21 15:31:00 by azaliaus         ###   ########.fr       */
+/*   Updated: 2018/06/22 13:29:18 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,11 @@ char			**ft_str2join(char **arr1, char **arr2)
 		return (NULL);
 	ret[s1 + s2] = NULL;
 	i = 0;
-	while (*arr1)
-		ret[i++] = ft_strdup(*(arr1++));
-	while (*arr2)
-		ret[i++] = ft_strdup(*(arr2++));
-	return ret;
+	if (arr1)
+		while (*arr1)
+			ret[i++] = ft_strdup(*(arr1++));
+	if (arr2)
+		while (*arr2)
+			ret[i++] = ft_strdup(*(arr2++));
+	return (ret);
 }
