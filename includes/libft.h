@@ -6,7 +6,7 @@
 /*   By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/03 14:12:49 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/06/25 16:38:58 by azaliaus         ###   ########.fr       */
+/*   Updated: 2018/09/19 18:37:02 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,5 +125,7 @@ size_t				ft_strlenchar(const char *str, char c);
 char				**ft_strarr_del(char **arr, int index);
 void				ft_put2str(char **arr);
 char				*ft_strjoin_by(char **arr, char c);
+void				ft_print_rep(char c, int n);
+int					ft_get_nbr_len_neg(long long int n);
 
 #endif

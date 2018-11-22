@@ -3,15 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: azaliaus <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/04 17:23:47 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/04/11 14:47:59 by azaliaus         ###   ########.fr       */
+/*   Updated: 2018/06/27 17:59:59 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+static int	is_spaces(const char *s)
+{
+	if (!s)
+		return (1);
+	while (*s)
+	{
+		if (*s != ' ' && *s != '\t' && *s != '\n')
+			return (1);
+		s++;
+	}
+	return (0);
+}
 
 char		*ft_strtrim(char const *s)
 {
@@ -22,6 +35,8 @@ char		*ft_strtrim(char const *s)
 
 	if (!s)
 		return (NULL);
+	if (!is_spaces(s))
+		return (ft_strnew(1));
 	begin = 0;
 	while (s[begin] == ' ' || s[begin] == '\t' || s[begin] == '\n')
 		begin++;

@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_nbr_len.c                                   :+:      :+:    :+:   */
+/*   ft_print_rep.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: azaliaus <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: azaliaus <azaliaus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/05 10:37:38 by azaliaus          #+#    #+#             */
-/*   Updated: 2018/04/23 11:17:15 by azaliaus         ###   ########.fr       */
+/*   Created: 2018/09/17 17:17:13 by azaliaus          #+#    #+#             */
+/*   Updated: 2018/09/17 17:17:53 by azaliaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_get_nbr_len(long long int n)
+void				ft_print_rep(char c, int n)
 {
-	int				ret;
-	long long int	nbr;
+	int i;
 
-	ret = 1;
-	if (n < 0)
-		nbr = -n;
-	else
-		nbr = n;
-	while (nbr /= 10)
-		ret++;
-	return (ret);
+	i = 0;
+	while (i < n)
+	{
+		ft_putchar(c);
+		i++;
+	}
 }
